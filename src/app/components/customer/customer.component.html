@@ -4,12 +4,14 @@
 <table *ngIf="dataLoaded!=false" class="table">
   <thead>
     <tr>
-      <th>Id</th>
+      <th>Müşteri Id</th>
+      <th>Kullanıcı Id</th>
       <th>Marka adı</th>
     </tr>
   </thead>
-<tr *ngFor="let brand of brands">
-  <td>{{brand.brandId}}</td>
-  <td>{{brand.name}}</td>
+<tr *ngFor="let customer of customers">
+  <td>{{customer.customerId}}</td>
+  <td>{{customer.userId}}</td>
+  <td>{{customer.companyName}}</td>
 </tr>
 </table>

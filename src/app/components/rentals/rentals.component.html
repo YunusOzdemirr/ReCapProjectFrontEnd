@@ -5,11 +5,17 @@
   <thead>
     <tr>
       <th>Id</th>
-      <th>Marka adı</th>
+      <th>Araba adı</th>
+      <th>Müşteri adı</th>
+      <th>Alınma Tarihi</th>
+      <th>Verilme Tarihi</th>
     </tr>
   </thead>
-<tr *ngFor="let brand of brands">
-  <td>{{brand.brandId}}</td>
-  <td>{{brand.name}}</td>
+<tr *ngFor="let rental of rentals">
+  <td>{{rental.Id}}</td>
+  <td>{{rental.carId}}</td>
+  <td>{{rental.customerId}}</td>
+  <td>{{rental.rentDate}}</td>
+  <td>{{rental.returnDate}}</td>
 </tr>
 </table>
