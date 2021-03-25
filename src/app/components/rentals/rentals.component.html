@@ -1,0 +1,15 @@
+<div *ngIf="dataLoaded==false" class="spinner-border" role="status">
+  <span class="visually-hidden"></span>
+</div>
+<table *ngIf="dataLoaded!=false" class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Marka adı</th>
+    </tr>
+  </thead>
+<tr *ngFor="let brand of brands">
+  <td>{{brand.brandId}}</td>
+  <td>{{brand.name}}</td>
+</tr>
+</table>
