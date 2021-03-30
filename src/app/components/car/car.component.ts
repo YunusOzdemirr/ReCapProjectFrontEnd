@@ -20,6 +20,13 @@ export class CarComponent implements OnInit {
         this.getCars();
       }
     })
+    this.activatedRoute.params.subscribe(params => {
+      if (params["colorId"]) {
+        this.getCarsByColorId(params["colorId"]);
+      }else {
+        this.getCars();
+      }
+    })
   }
   getCars() {
     this.carService.getCars().subscribe((response) => {
