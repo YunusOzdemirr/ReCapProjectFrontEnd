@@ -6,11 +6,11 @@
     <li *ngFor="let cartItem of cartItems">
       <a class="dropdown-item"><span
           class="badge bg-secondary">{{cartItem.quantity}}</span>{{cartItem.car.description}}<span
-          class="badge bg-secondary" (click)="removeFromCart(cartItem.car)">Sil</span></a>
+          (click)="removeFromCart(cartItem.car)" class="badge bg-secondary">Sil</span></a>
     </li>
     <li>
       <hr class="dropdown-divider">
     </li>
-    <li><a class="dropdown-item">Sepete Git</a></li>
+    <li><a class="dropdown-item menu-item">Sepete Git</a></li>
   </ul>
 </li>
