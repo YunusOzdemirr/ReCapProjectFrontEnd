@@ -22,12 +22,18 @@
         <th>Açıklama</th>
       </tr>
     </thead>
-    <tr *ngFor="let car of cars | filter:filterText">
-      <td>{{car.carId}}</td>
-      <td>{{car.brandId}}</td>
-      <td>{{car.colorId}}</td>
-      <td>{{car.modelYear}}</td>
-      <td>{{car.dailyPrice}}</td>
-      <td>{{car.description}}</td>
-    </tr>
+
+    <tbody>
+      <tr *ngFor="let car of cars | filter:filterText">
+        <td>{{car.carId}}</td>
+        <td>{{car.brandId}}</td>
+        <td>{{car.colorId}}</td>
+        <td>{{car.modelYear}}</td>
+        <td>{{car.dailyPrice}}</td>
+        <td>{{car.description}}</td>
+        <td>
+          <button (click)="addToCart(car)" class="btn btn-success" type="button">Sepete Ekle</button>
+        </td>
+      </tr>
+    </tbody>
   </table>

@@ -14,7 +14,7 @@ export class CarComponent implements OnInit {
   filterText = "";
   constructor(private carService: CarService,
     private activatedRoute: ActivatedRoute,
-    private toastService: ToastrService,
+    private toastrService: ToastrService,
   ) { }
 
   ngOnInit(): void {
@@ -51,4 +51,8 @@ export class CarComponent implements OnInit {
       this.dataLoaded = true;
     });
   }
+  addToCart(car: Car) {
+    this.toastrService.success("Sepete eklendi", car.description);
+  }
+
 }

@@ -13,6 +13,7 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ToastrModule } from 'ngx-toastr';
 import { FormsModule } from '@angular/forms';
+import { CartSummaryComponent } from './components/cart-summary/cart-summary.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { FormsModule } from '@angular/forms';
     RentalsComponent,
     NaviComponent,
     FilterPipe,
-
+    CartSummaryComponent,
   ],
   imports: [BrowserModule,
     AppRoutingModule,
