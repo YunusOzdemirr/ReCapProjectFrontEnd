@@ -1,23 +1,33 @@
 <div *ngIf="dataLoaded==false" class="spinner-border" role="status">
   <span class="visually-hidden"></span>
 </div>
-<table *ngIf="dataLoaded!=false" class="table">
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Marka adı</th>
-      <th>Renk adı</th>
-      <th>Çıkış Yılı</th>
-      <th>Günlük Ücreti</th>
-      <th>Açıklama</th>
+
+<div class="mb-3">
+  <label for="filterText" class="form-label">Ürün Ara</label>
+  <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="Arama İfadesi Giriniz">
+</div>
+<div *ngIf="filterText.length>2" class="alert alert-primary">
+  {{filterText}} aradınız
+</div>
+<table *ngIf="dataLoaded != false" class="table">
+
+  <table *ngIf="dataLoaded==true" class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Marka adı</th>
+        <th>Renk adı</th>
+        <th>Çıkış Yılı</th>
+        <th>Günlük Ücreti</th>
+        <th>Açıklama</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let car of cars | filter:filterText">
+      <td>{{car.carId}}</td>
+      <td>{{car.brandId}}</td>
+      <td>{{car.colorId}}</td>
+      <td>{{car.modelYear}}</td>
+      <td>{{car.dailyPrice}}</td>
+      <td>{{car.description}}</td>
     </tr>
-  </thead>
-<tr *ngFor="let car of cars">
-  <td>{{car.carId}}</td>
-  <td>{{car.brandId}}</td>
-  <td>{{car.colorId}}</td>
-  <td>{{car.modelYear}}</td>
-  <td>{{car.dailyPrice}}</td>
-  <td>{{car.description}}</td>
-</tr>
-</table>
+  </table>

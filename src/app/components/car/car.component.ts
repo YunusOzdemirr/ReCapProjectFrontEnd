@@ -10,20 +10,21 @@ import { CarService } from 'src/app/services/carService/car.service';
 export class CarComponent implements OnInit {
   cars: Car[] = [];
   dataLoaded = false;
-  constructor(private carService: CarService, private activatedRoute: ActivatedRoute) {}
+  filterText = "";
+  constructor(private carService: CarService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
       if (params["brandId"]) {
         this.getCarsByBrandId(params["brandId"]);
-      }else {
+      } else {
         this.getCars();
       }
     })
     this.activatedRoute.params.subscribe(params => {
       if (params["colorId"]) {
         this.getCarsByColorId(params["colorId"]);
-      }else {
+      } else {
         this.getCars();
       }
     })
