@@ -10,6 +10,8 @@ import { CustomerComponent } from './components/customer/customer.component';
 import { RentalsComponent } from './components/rentals/rentals.component';
 import { NaviComponent } from './components/navi/navi.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { ToastrModule } from 'ngx-toastr';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -22,8 +24,16 @@ import { FormsModule } from '@angular/forms';
     RentalsComponent,
     NaviComponent,
     FilterPipe,
+
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right',
+    }),],
   providers: [],
   bootstrap: [AppComponent],
 })
