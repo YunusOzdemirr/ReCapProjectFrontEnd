@@ -14,6 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ToastrModule } from 'ngx-toastr';
 import { FormsModule } from '@angular/forms';
 import { CartSummaryComponent } from './components/cart-summary/cart-summary.component';
+import { BrandColorComponent } from './components/brand-color/brand-color.component';
+import { CommonModule } from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { CartSummaryComponent } from './components/cart-summary/cart-summary.com
     NaviComponent,
     FilterPipe,
     CartSummaryComponent,
+    BrandColorComponent,
   ],
   imports: [BrowserModule,
     AppRoutingModule,
@@ -34,7 +37,9 @@ import { CartSummaryComponent } from './components/cart-summary/cart-summary.com
     BrowserAnimationsModule,
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right',
-    }),],
+    }),
+    CommonModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

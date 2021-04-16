@@ -1,0 +1,17 @@
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Filtre
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <li *ngFor="let brand of brands">
+      <a class="dropdown-item"><span class="badge bg-secondary">{{brand.name}}</span></a>
+    </li>
+    <li *ngFor="let color of colors">
+      <a class="dropdown-item"><span class="badge bg-secondary">{{color.name}}</span></a>
+    </li>
+    <li>
+      <hr class="dropdown-divider">
+    </li>
+    <li><a class="dropdown-item menu-item">Marka-Renk</a></li>
+  </ul>
+</li>
