@@ -14,7 +14,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ToastrModule } from 'ngx-toastr';
 import { FormsModule } from '@angular/forms';
 import { CartSummaryComponent } from './components/cart-summary/cart-summary.component';
-import { BrandColorComponent } from './components/brand-color/brand-color.component';
 import { CommonModule } from "@angular/common";
 
 @NgModule({
@@ -28,7 +27,6 @@ import { CommonModule } from "@angular/common";
     NaviComponent,
     FilterPipe,
     CartSummaryComponent,
-    BrandColorComponent,
   ],
   imports: [BrowserModule,
     AppRoutingModule,
